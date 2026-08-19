@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: classgrid
+    runtime: node
+    plan: free
+    buildCommand: cd render-app && npm install && npm run build
+    startCommand: cd render-app && npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
